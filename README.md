@@ -83,15 +83,4 @@ Visitors can read blog posts by category, view recent posts on the home page, an
 
 ---
 
-## Installation
-```bash
-composer install
-cp .env.example .env
-php artisan key:generate
-php artisan migrate
-php artisan serve
-```
-
----
-
 Simple, clean, and beginner-friendly Laravel blog project.
