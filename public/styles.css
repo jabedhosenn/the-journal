@@ -1,0 +1,349 @@
+/* ============================================
+   THE JOURNAL - Custom Styles
+   ============================================ */
+
+/* ---------- CSS Variables ---------- */
+:root {
+    --color-primary: #c45a3b;
+    --color-primary-light: rgba(196, 90, 59, 0.1);
+    --color-background: #faf8f5;
+    --color-foreground: #1a1f2e;
+    --color-muted: #6b7280;
+    --color-border: #e5e2dc;
+    --color-card: #f5f3ef;
+    
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+    
+    --shadow-card: 0 4px 20px rgba(26, 31, 46, 0.08);
+    --shadow-card-hover: 0 10px 40px rgba(26, 31, 46, 0.15);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---------- Base Styles ---------- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--color-foreground);
+}
+
+/* ---------- Navbar ---------- */
+.navbar-brand {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    color: var(--color-foreground) !important;
+    transition: var(--transition-smooth);
+}
+
+.navbar-brand:hover {
+    color: var(--color-primary) !important;
+}
+
+.nav-link {
+    font-family: var(--font-body);
+    color: var(--color-muted) !important;
+    font-weight: 400;
+    transition: var(--transition-smooth);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--color-foreground) !important;
+}
+
+/* ---------- Hero Section ---------- */
+.hero-section {
+    background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-background) 100%);
+}
+
+.hero-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image {
+    transition: transform 0.5s ease;
+}
+
+.hero-image-wrapper:hover .hero-image {
+    transform: scale(1.05);
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    font-family: var(--font-body);
+    font-weight: 500;
+    transition: var(--transition-smooth);
+}
+
+.btn-primary:hover {
+    background-color: #b34e31;
+    border-color: #b34e31;
+    transform: translateY(-2px);
+}
+
+.btn-outline-dark {
+    border-color: var(--color-border);
+    color: var(--color-foreground);
+    transition: var(--transition-smooth);
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+}
+
+/* ---------- Category Cards ---------- */
+.category-card {
+    background: white;
+    border: 1px solid var(--color-border);
+    transition: var(--transition-smooth);
+}
+
+.category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: transparent;
+}
+
+.category-card .card-title {
+    font-family: var(--font-heading);
+    color: var(--color-foreground);
+    transition: var(--transition-smooth);
+}
+
+.category-card:hover .card-title {
+    color: var(--color-primary);
+}
+
+.category-card:hover .bi-arrow-right {
+    color: var(--color-primary) !important;
+    transform: translateX(4px);
+}
+
+.category-card .bi-arrow-right {
+    transition: var(--transition-smooth);
+}
+
+/* ---------- Blog Cards ---------- */
+.blog-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.card-img-wrapper {
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 16/10;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.blog-card:hover .card-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.blog-card .card-title {
+    font-family: var(--font-heading);
+    color: var(--color-foreground);
+    transition: var(--transition-smooth);
+}
+
+.blog-card:hover .card-title {
+    color: var(--color-primary);
+}
+
+/* ---------- Badges ---------- */
+.badge {
+    font-family: var(--font-body);
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+.bg-primary-subtle {
+    background-color: var(--color-primary-light) !important;
+}
+
+.text-primary {
+    color: var(--color-primary) !important;
+}
+
+a.badge:hover {
+    background-color: var(--color-primary) !important;
+    color: white !important;
+}
+
+/* ---------- Newsletter Section ---------- */
+.newsletter-section {
+    background: var(--color-primary-light);
+}
+
+.newsletter-section .form-control {
+    border: 1px solid var(--color-border);
+    padding: 0.75rem 1rem;
+    font-family: var(--font-body);
+}
+
+.newsletter-section .form-control:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+/* ---------- Footer ---------- */
+.footer-link {
+    transition: var(--transition-smooth);
+}
+
+.footer-link:hover {
+    color: var(--color-primary) !important;
+}
+
+/* ---------- Article Content ---------- */
+.article-content {
+    font-size: 1.125rem;
+}
+
+.article-content p {
+    margin-bottom: 1.5rem;
+    color: rgba(26, 31, 46, 0.85);
+}
+
+.article-content h2 {
+    font-size: 1.75rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.article-content h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.article-content ul,
+.article-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.article-content li {
+    margin-bottom: 0.5rem;
+    color: rgba(26, 31, 46, 0.85);
+}
+
+.article-content blockquote {
+    font-size: 1.25rem;
+    margin: 2rem 0;
+}
+
+.article-content .lead {
+    font-size: 1.25rem;
+    color: var(--color-muted);
+}
+
+/* ---------- Utility Classes ---------- */
+.dot {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background-color: var(--color-muted);
+    border-radius: 50%;
+}
+
+.smaller {
+    font-size: 0.8125rem;
+}
+
+/* ---------- Animations ---------- */
+.animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- Responsive Adjustments ---------- */
+@media (max-width: 767.98px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .display-6 {
+        font-size: 1.5rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+    
+    .article-content {
+        font-size: 1rem;
+    }
+    
+    .article-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ---------- Form Styles ---------- */
+.form-control {
+    background-color: white;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    transition: var(--transition-smooth);
+}
+
+.form-control:focus {
+    background-color: white;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+.form-control::placeholder {
+    color: var(--color-muted);
+}
